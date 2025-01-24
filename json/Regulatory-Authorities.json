@@ -1,0 +1,53 @@
+
+[
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/rcgm.jpg",
+    "name": "IBSC",
+    "title": "Institutional Biosafety Committee (IBSC) of the organization"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/rcgm.jpg",
+    "name": "RCGM",
+    "title": "Institutional Biosafety Committee (IBSC) of the organization"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/geac.jpg",
+    "name": "GEAC",
+    "title": "Genetic Engineering Appraisal Committee (GEAC)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/nba.jpg",
+    "name": "NBA",
+    "title": "National Biodiversity Authority of India (NBA)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/noLogo.jpg",
+    "name": "CPCSEA",
+    "title": "Committee for the Purpose of Control and Supervision of Experiments on Animals (CPCSEA)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/noLogo.jpg",
+    "name": "IAECs",
+    "title": "Institutional Animal Ethics Committees (IAECs)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/noLogo.jpg",
+    "name": "DAHD",
+    "title": "Department of Animal Husbandry & Dairying (DAHD), Ministry of Agriculture & Farmer Welfare"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/cdsco.jpg",
+    "name": "CDSCO",
+    "title": "Central Drugs Standard Control Organization (CDSCO)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/noLogo.jpg",
+    "name": "IHEC",
+    "title": "Institutional Human Ethics Committees (IHECs)"
+  },
+  {
+    "img_url": "https://biorrap.gov.in/Default/img/icmr.jpg",
+    "name": "HMSC",
+    "title": "Regulatory approvals from Health Ministry’s Screening Committee (HMSC)"
+  }
+]

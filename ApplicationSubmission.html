@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submission</title>
+       <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+<body>
+      <!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+                <ul id="searchResults" class="list-unstyled mt-3"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header container-fluid d-flex align-items-center justify-content-between">
+    <div class="flex-grow-1 d-none d-md-block"><b class="text-light fs-4">Biological Research Regulatory Approval Portal (BioRRAP)
+</b></div>
+
+    <a class="link text-decoration-none text-dark" href="#navbar">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-arrow-return-right"></i>
+            <span  class="fw-medium d-none d-sm-inline pre-header-text">Skip to Main Content</span>
+        </div>
+    </a>
+
+    <div class="divider d-none d-sm-block"></div>
+
+    <a class="link text-decoration-none text-dark" href="/sitemap">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-diagram-2"></i>
+            <span  class="fw-medium d-none d-sm-inline pre-header-text">Sitemap</span>
+        </div>
+    </a>
+
+    <div class="wide-divider d-none d-sm-block"></div>
+
+    <div class="controls d-flex align-items-center gap-2">
+        <button class="btn btn-dark control-btn minus" onclick="zoomOut()">
+            <i class="bi bi-dash-lg"></i>
+        </button>
+        <div class="percentage pre-header-text">100%</div>
+        <button class="btn btn-dark control-btn plus" onclick="zoomIn()">
+            <i class="bi bi-plus-lg"></i>
+        </button>
+        <button class="btn btn-dark control-btn" onclick="toggleFullscreen()">
+            <i class="bi bi-arrows-fullscreen" id="fullscreen-icon"></i>
+        </button>
+         <button class="btn btn-dark control-btn" id="themeToggle">
+                <i class="bi bi-sun" id="themeIcon"></i>
+            </button>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+             <img
+            src="./img/logo.jpg"
+            alt="BioRRAP"
+          />
+            <span>Department of Biotechnology<br>Ministry of Science and Technology</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="./AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./OrganizationRegistration.html">Organization Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Application Submission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./RegulatoryDocuments.html">Regulatory Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Faqs.html">FAQ</a>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="./login.html"><button class="btn btn-custom">Login</button></a>
+                <a href="./OrganizationRegistration.html"><button class="btn btn-custom">Register</button></a>
+            </div>
+        </div>
+    </div>
+</nav>
+ <div class="container-fluid mt-2">
+        <div class="marquee-container">
+            <div class="marquee">
+                BioRRAP is Notified: Organizations can now register on BioRRAP. <a href="https://biorrap.gov.in/upload/OMNotificationBioRRAP.pdf" style="color: #e99c03e0;"> to view notification</a>
+            </div>
+        </div>
+    </div>
+<!-- Application Submission -->
+ <section class="parallax mt-2" id="applicationsubmission-parallax">
+      <h2>Application Submission</h2>
+    </section>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card shadow rounded position-sticky">
+            <div
+              class="card-header text-white border-warning position-relative"
+            >
+              <div class="d-flex align-items-center">
+                <h5 class="mb-0">Important links</h5>
+                  &nbsp;<i class="bi bi-link fs-4"></i>
+              </div>
+            </div>
+            <div
+              class="card-body p-0"
+            >
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./Guidance.html">Guidance</a>
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./AdministrativeAuthorityList.html"
+                      >Administrative Authorities for International Research</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryAuthorityList.html"
+                      >Regulatory Authorities</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryDocuments.html"
+                      >Regulatory Documents</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <div class="contactdetails p-2">
+                  <h6><b>For Any Query:</b></h6>
+                  <p>
+                    <i class="bi bi-envelope-check icon-custme"></i>
+                    biorrap[dot]in[at]dbt[dot]nic[dot]in<br />
+                    <i class="bi bi-telephone icon-custme"></i> Contact At:
+                    011-24365136
+                  </p>
+                
+                </div>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 p-2">
+        <ol class="custom-list">
+        <li class="custom-item">
+          <span class="custom-description">
+            Search Your Applicant Agency by clicking on "Organization
+            Registration" from Menu or here (<a
+              href="https://biorrap.gov.in/Home/SearchOrganization"
+              >Applicant Agency</a
+            >)
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            In Search Applicant Agency Section, you can enter full Applicant
+            Agency name or partial Organization name, then click 'Search' Button
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            If the Applicant Agency is found in the search list, then click on
+            'Request for New User'.
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            If the Applicant Agency is not registered, request the competent
+            authority to register the Applicant Agency on this portal by
+            clicking " Register Your Applicant Agency"
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            In New user request - Enter your Complete Name, Official Email ID
+            and ten digit Mobile Number then click on 'Save' Button.
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            Once the request for New User is approved by your Applicant Agency
+            Admin, the login credentials will be sent to your registered Email
+            ID. In case of rejection, the reason for rejection will be sent to
+            your registered Email ID.
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            After getting login credentials, click on the “Submit new proposal”
+            menu available after user login to submit research proposal for
+            registration (<a href="https://biorrap.gov.in/Home/Login"
+              >Submit Research Proposal</a
+            >)
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            After the submission of research proposal, BioRRAP ID would be
+            generated.
+          </span>
+        </li>
+        <li class="custom-item">
+          <span class="custom-description">
+            BioRRAP ID is required for submission of research proposal on
+            portals of relevant regulatory agencies.
+          </span>
+        </li>
+      </ol>
+        </div>
+      </div>
+    </div>
+    <footer class="text-light py-4">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- BIORRAP Section -->
+          <div class="col-md-6">
+            <h5 class="text-uppercase">BIORRAP</h5>
+            <p class="footerp">
+              Biological Research activities involve handling and exchange of
+              materials that include micro-organisms, plants, small and large
+              animals, human samples as well as biodiversity resources of the
+              country. The Government of India supports biological research
+              through its Ministries/Departments providing statutory and
+              administrative approvals through their regulatory
+              agencies/committees. Health Ministry’s Screening Committee (HMSC),
+              Review Committee on Genetic Manipulation (RCGM), Committee for the
+              Purpose of Control and Supervision of Experiments on Animals
+              (CPCSEA), National Biodiversity Authority (NBA), Directorate Of
+              Plant Protection, Quarantine & Storage (DPPQ) and Directorate
+              General of Foreign Trade (DGFT) are amongst the regulatory
+              agencies/committees facilitating biological research in India by
+              providing requisite approvals.
+            </p>
+          </div>
+
+          <!-- Useful Links Section -->
+          <div class="col-md-2">
+            <h5 class="text-uppercase">Useful Links</h5>
+            <ul class="list-unstyled icon-custmef">
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./AboutUs.html"
+                  class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./Guidance.html"
+                  class="text-light text-decoration-none"
+                  >Guidelines</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./OrganizationRegistration.html"
+                  class="text-light text-decoration-none"
+                  >Search Applicant Agency</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ApplicationSubmission.html"
+                  class="text-light text-decoration-none"
+                  >Application Submission</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./RegulatoryDocuments.html"
+                  class="text-light text-decoration-none"
+                  >Regulatory Documents</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ContactUs.html"
+                  class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a href="./Faqs.html" class="text-light text-decoration-none"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Us Section -->
+          <div class="col-md-3">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p class="small">
+              <i class="bi bi-geo-alt-fill icon-custme"></i> Department of
+              Biotechnology Ministry of Science & Technology Block 2, 6th-8th
+              Floor, Block 3, 5th Floor CGO Complex, Lodhi Road, New Delhi - 110
+              003.
+            </p>
+        
+            <p class="small">
+              <strong>For Any Query:</strong><br />
+
+              <i class="bi bi-envelope-check icon-custme"></i> Email:
+               biorrap-hyphen-team@dbt.nic.in<br />
+              <i class="bi bi-telephone icon-custme"></i> Phone: 011-24365136
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4 border-top pt-3">
+          <p class="small mb-0">
+            Website is Designed and Developed by Department of Biotechnology,
+            Ministry of Science & Technology, Govt. of India.
+          </p>
+          <img
+            src="https://biorrap.gov.in/Default/img/NIC_Logo.png"
+            alt="logo"
+            width="100"
+          />
+        </div>
+      </div>
+    </footer><!-- left side links -->
+        <div class="sidebar">
+          <a href="./Faqs.html">
+            <div class="icon-item">
+              <i class="bi bi-question-lg"></i></div
+          ></a>
+          <a href="./ContactUs.html">
+            <div class="icon-item">
+              <i class="bi bi-person-lines-fill"></i></div
+          ></a>
+        </div><i class="bi bi-arrow-up-square-fill" id="scrollToTop"></i>
+               <button class="chatbot-toggler">
+             <span class="bi bi-chat-left-text-fill fs-4"></span>
+             <span class="bi bi-x-lg"></span>
+           </button>
+           <div class="chatbot">
+             <div class="chat-header">
+               <img src="./img/logo.jpg" alt="Support DP" />
+               <span>BioRRAP TEAM</span>
+               <span class="close-btn bi bi-x-lg"></span>
+             </div>
+        
+             <ul class="chatbox">
+               <li class="chat incoming">
+                 <p>Hi there! How can I help you today?</p>
+               </li>
+             </ul>
+             <div class="chat-input">
+               <textarea
+                 placeholder="Enter a message..."
+                 spellcheck="false"
+                 required
+               ></textarea>
+               <span id="send-btn" class="bi bi-send-fill"></span>
+             </div>
+           </div>
+    <!-- chat js -->
+     <script src="./js/chat.js"></script>
+<!-- scroll to top js -->
+ <script src="./js/scrolltop.js"></script>
+    <!-- pre header controller button js -->
+ <script src="./js/preheader.js"></script>
+       <!-- search modal js -->
+     <script src="./js/SearchModal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

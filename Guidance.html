@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidance</title>
+       <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+<body>
+      <!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+                <ul id="searchResults" class="list-unstyled mt-3"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header container-fluid d-flex align-items-center justify-content-between">
+    <div class="flex-grow-1 d-none d-md-block"><b class="text-light fs-4">Biological Research Regulatory Approval Portal (BioRRAP)
+</b></div>
+
+    <a class="link text-decoration-none text-dark" href="#navbar">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-arrow-return-right"></i>
+            <span  class="fw-medium d-none d-sm-inline pre-header-text">Skip to Main Content</span>
+        </div>
+    </a>
+
+    <div class="divider d-none d-sm-block"></div>
+
+    <a class="link text-decoration-none text-dark" href="/sitemap">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-diagram-2"></i>
+            <span  class="fw-medium d-none d-sm-inline pre-header-text">Sitemap</span>
+        </div>
+    </a>
+
+    <div class="wide-divider d-none d-sm-block"></div>
+
+    <div class="controls d-flex align-items-center gap-2">
+        <button class="btn btn-dark control-btn minus" onclick="zoomOut()">
+            <i class="bi bi-dash-lg"></i>
+        </button>
+        <div class="percentage pre-header-text">100%</div>
+        <button class="btn btn-dark control-btn plus" onclick="zoomIn()">
+            <i class="bi bi-plus-lg"></i>
+        </button>
+        <button class="btn btn-dark control-btn" onclick="toggleFullscreen()">
+            <i class="bi bi-arrows-fullscreen" id="fullscreen-icon"></i>
+        </button>
+         <button class="btn btn-dark control-btn" id="themeToggle">
+                <i class="bi bi-sun" id="themeIcon"></i>
+            </button>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img
+            src="./img/logo.jpg"
+            alt="BioRRAP"
+          />
+            <span>Department of Biotechnology<br>Ministry of Science and Technology</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="./AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./OrganizationRegistration.html">Organization Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ApplicationSubmission.html">Application Submission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./RegulatoryDocuments.html">Regulatory Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Faqs.html">FAQ</a>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="./login.html"><button class="btn btn-custom">Login</button></a>
+                <a href="./OrganizationRegistration.html"><button class="btn btn-custom">Register</button></a>
+            </div>
+        </div>
+    </div>
+</nav>
+ <div class="container-fluid mt-2">
+        <div class="marquee-container">
+            <div class="marquee">
+                BioRRAP is Notified: Organizations can now register on BioRRAP. <a href="https://biorrap.gov.in/upload/OMNotificationBioRRAP.pdf" style="color: #e99c03e0;"> to view notification</a>
+            </div>
+        </div>
+    </div>
+     <section class="parallax mt-2" id="guidance-parallax">
+      <h2>Guidance</h2>
+    </section>
+
+<div class="container-fluid  mt-2">
+    <div class="row justify-content-center">
+          <div class="col-md-3 mt-2">
+          <div class="card shadow rounded position-sticky">
+            <div
+              class="card-header text-white border-warning position-relative"
+            >
+              <div class="d-flex align-items-center">
+                <h5 class="mb-0">Important links</h5>
+                  &nbsp;<i class="bi bi-link fs-4"></i>
+              </div>
+            </div>
+            <div
+              class="card-body p-0"
+            >
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./Guidance.html">Guidance</a>
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./AdministrativeAuthorityList.html"
+                      >Administrative Authorities for International Research</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryAuthorityList.html"
+                      >Regulatory Authorities</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryDocuments.html"
+                      >Regulatory Documents</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <div class="contactdetails p-2">
+                  <h6><b>For Any Query:</b></h6>
+                  <p>
+                    <i class="bi bi-envelope-check icon-custme"></i>
+                    biorrap[dot]in[at]dbt[dot]nic[dot]in<br />
+                    <i class="bi bi-telephone icon-custme"></i> Contact At:
+                    011-24365136
+                  </p>
+                
+                </div>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-2">
+            <div class="guidance">
+    <h2>◆ <b>Regulatory approvals required for Research & Development using Biological Material</b></h2>
+</div>
+            <div class="row mb-2">
+        <!-- Sidebar for Tabs -->
+        <div class="col-md-2">
+            <ul class="guidance-nav flex-column flex-md-column nav-pills p-0" id="vertical-tabs" role="tablist" aria-orientation="vertical">
+                <li class="nav-item">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">IBSC</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">RCGM</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-geac-tab" data-bs-toggle="pill" data-bs-target="#v-pills-geac" type="button" role="tab" aria-controls="v-pills-geac" aria-selected="false">GEAC</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-nba-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nba" type="button" role="tab" aria-controls="v-pills-nba" aria-selected="false">NBA</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-iaec-tab" data-bs-toggle="pill" data-bs-target="#v-pills-iaec" type="button" role="tab" aria-controls="v-pills-iaec" aria-selected="false">IAECs/CCSEA</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-dahd-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dahd" type="button" role="tab" aria-controls="v-pills-dahd" aria-selected="false">DAHD</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-cdsco-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cdsco" type="button" role="tab" aria-controls="v-pills-cdsco" aria-selected="false">CDSCO</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-ihec-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ihec" type="button" role="tab" aria-controls="v-pills-ihec" aria-selected="false">IHECs</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="v-pills-hmsc-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hmsc" type="button" role="tab" aria-controls="v-pills-hmsc" aria-selected="false">HMSC</button>
+                </li>
+            </ul>
+        </div>
+        <!-- Content Area -->
+        <div class="col-md-10 m-auto">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <h4><b>Review Committee on Genetic Manipulation (RCGM)</b></h4>
+                    <ul>
+                        <li>Before commencement of Category I GE experiments, the investigator should intimate the IBSC about the objective and experimental design of the study along with organisms involved. IBSC should review the same as and when convened for record or action if any.</li>
+                    <li>All category II GE experiments require prior authorization from IBSC before the commencement of the experiments through submission of information in the prescribed proforma to RCGM.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    <h4><b>Institutional Biosafety Committee (IBSC) of the organization</b></h4>
+    <ul>
+        <li>
+            <b>All category II GE experiments require prior authorization from IBSC before the commencement of the experiments through submission of information in the prescribed proforma to RCGM.</b>
+        </li>
+        <li>
+            <b>IBSCs/Researchers submit applications to RCGM for:</b>
+            <ul>
+                <li>
+                    Approval to conduct preclinical and/or safety studies of similar biologic developed using HMOs/GEOs/LMOs for Healthcare and Industrial Use.
+                </li>
+                <li>
+                    Approval to conduct preclinical and/or safety studies of new DNA Products developed using HMOs/GEOs/LMOs.
+                </li>
+                <li>
+                    Approval for reporting to RCGM on preclinical or other safety studies of similar biologic/new rDNA product developed using HMOs/GEOs/LMOs.
+                </li>
+            </ul>
+        </li>
+        <li>
+            RCGM issues NOC after evaluation of PCT data to DCGI to conduct the appropriate phase of clinical trial.
+        </li>
+        <li>
+            <b>Activities involving Research, and Safety studies of GE Plants:</b>
+            <ul>
+                <li>
+                    IBSC recommends applications to RCGM to carry out R&D involving HMOs/GEOs/LMOs for Agricultural and Environmental Application.
+                </li>
+                <li>
+                    IBSC/Researchers submit applications to RCGM for:
+                    <ul>
+                        <li>
+                            Approval to undertake Confined Field Trial (CFT) of Event Selection, Biosafety Research Trial – I (BRL-I), and other studies to RCGM and to undertake safety studies of GE Crops/Plants for Agricultural and Environmental use.
+                        </li>
+                        <li>
+                            Approval on reports of Safety Studies of GE Crops/Plants for Agricultural and Environmental Use.
+                        </li>
+                        <li>
+                            Approval on reports of Safety Studies of HMOs/GEOs/LMOs other than GE Crops/Plants for Agricultural and Environmental use.
+                        </li>
+                        <li>
+                            Approval on reports of restricted release research study(s)/trial(s) of GE arthropods for agricultural, healthcare, and environmental use.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    RCGM forwards its recommendation on confined field trial applications to GEAC for further consideration. Based on GEAC approval, RCGM issues a permit for the trial.
+                </li>
+            </ul>
+        </li>
+        <li>
+<b>Certification of BSL-3 facilities:</b>
+<ul>
+               <li>Certification of BSL-3 laboratories is mandatory (w.e.f. 01.07.2021) for all organizations handling hazardous microorganisms of RG-3 for research and development purpose. Further, all new BSL-3 facilities will undergo Certification prior to commencement of facility operation. As per the “Guidelines for the Establishment of Containment Facilities: Biosafety Level 2 (BSL-2) & 3 (BSL-3) and Certification of BSL-3 facility, 2020”, an Inter-Ministerial Committee for Certification of BSL-3 facility shall issue Certificate for BSL-3 facility based on review of documentation submitted by an Organization, duly approved by the IBSC and duly forwarded by the DBT Nominee of the IBSC; and on-site verification inspection by the committee, if required.</li>
+               
+            </ul>
+        </li>
+    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-geac" role="tabpanel" aria-labelledby="v-pills-geac-tab">
+    <h4><b>Genetic Engineering Appraisal Committee (GEAC)</b></h4>
+               <ul>
+                        <li>GEAC is the apex body constituted by the MoEF&CC and is responsible for approval of proposals relating to release of HMOs/GEOs/ LMOs and products thereof into the environment including experimental field trials.
+</li>
+<li>GEAC appraise proposals relating to release of genetically engineered organisms and products into the environment including experimental field trials.
+</li>
+<li>For GE plants, GEAC based on thorough assessment for food/feed and environmental safety of GE plant recommends the application to Hon’ble Minister, MoEF&CC for the release of a GE crop into the environment.
+</li>
+<li>The applicants has to apply online of GEAC website (http://www.geacindia.gov.in/) for micro-organisms related application in FORM – II - a application for environmental approval of clinical trials/pharmaceuticals / veterinary drugs derived from living modified organisms / hazardous micro-organisms.
+</li>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-nba" role="tabpanel" aria-labelledby="v-pills-nba-tab">
+             <h4><b> National Biodiversity Authority of India</b></h4>
+
+                    <ul>
+                        <li>In the case of research, no approval is required for Indian researchers
+</li>
+<li>In the case of institutions having collaborative research with other foreign partners, no approval is required, if such research is approved by Government.
+</li>
+<li>The person or entity who is accessing a biological resource or traditional knowledge shall obtain the required approvals from the National Biodiversity Authority or the State Biodiversity Board depending on the status of the person or entity as defined in the Act.
+</li>
+<li>Application before the NBA can be filed online (www.nbaindia.org) after remitting the required application fee.
+</li>
+<li>The applicant shall provide the details of the biological material to be accessed, the place of access, quantity of material, associated knowledge (if any), details of intended use
+</li>
+<li>After consulting with the State Biodiversity Board or Biodiversity Management Committee, approval shall be provided in the form of a written agreement between the NBA / SBB and the applicant
+</li>
+<li>If the gross ex-factory sale (after deducting all applicable taxes) of the product utilising the biological resources is below Rs. 1 crore, the obligation on the part of the applicant shall be to pay 0.1% as Access and Benefit Sharing (ABS) amount i.e. Rs. 10,000/-. If the sale is between Rs. 1 crore to Rs. 3 crore, ABS obligation would be 0.2% and if the sale is more than Rs. 3 crore, ABS obligation would be 0.5%.
+</li>
+<li>NBA has an online portal for electronic filing of ABS application for obtaining approval.
+</li>
+<li>NBA accords approvals for persons or entities falling under section 3(2) of the BD Act. 2002. Companies falling under this section are those which are registered outside India or those which are registered in India but have non-Indian participation in their share capital or management. For companies who do not fall under section 3(2), the approvals are accorded by the State Biodiversity Boards following the same process.
+</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-iaec" role="tabpanel" aria-labelledby="v-pills-iaec-tab">
+                    <h4><b> Institutional Animal Ethics Committees (IAECs) / Committee for Control and Supervision of Experiments on Animals (CPCSEA)</b></h4>
+                <ul>
+                    <li>IAEC reviews and approve all types of protocols for research involving small animal experimentation before the start of the study.</li>
+               <li>For approval of experimentation on large animals, the case is required to be forwarded to CPCSEA in prescribed manner with recommendation of IAEC. CPCSEA is a statutory Committee of Department of Animal Husbandry and Dairying (DAHD), Ministry of Fisheries, Animal Husbandry and Dairying (MoFAH&D).
+</li>
+                </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-dahd" role="tabpanel" aria-labelledby="v-pills-dahd-tab">
+                    <h4><b> Department of Animal Husbandry & Dairying (DAHD), Ministry of Agriculture & Farmer Welfare</b></h4>
+                    <ul>
+                        <li>DAHD, Ministry of Agriculture & Farmer Welfare issues No objection certificate for grant of permission to undertake Field trial for a new Veterinary biological.
+</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-cdsco" role="tabpanel" aria-labelledby="v-pills-cdsco-tab">
+                    <h4><b> Central Drugs Standard Control Organization (CDSCO)- Veterinary Division</b></h4>
+                    <ul>
+                        <li>Regulation of Veterinary drugs follows the provisions of Drugs and Cosmetic Act 1940 and Rules 1945.
+</li>
+<li>Central Drugs Standard Control Organization grants permission to import or manufacture a new drug or to undertake Field trial for New Drugs Approval (Market Authorization) of Veterinary Biologicals
+</li>
+<li>The application for field trial along with covering letter and trial protocol with all the supporting documents shall be submitted to CDSCO in hard copy as well as in soft copy to be approved by CDSCO. The CDSCO is obliged to consult with the Department of Animal Husbandry, Dairying & Fisheries (DADF), Ministry of Agriculture and Farmers Welfare (MOA) prior to reaching a decision on an application for a trial.
+</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ihec" role="tabpanel" aria-labelledby="v-pills-ihec-tab">
+                    <h4><b> Institutional Human Ethics Committees (IHECs)</b></h4>
+                    <ul>
+                        <li>All Biomedical Research involving Human Participants are to be approved by IHECs.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-hmsc" role="tabpanel" aria-labelledby="v-pills-hmsc-tab">
+                    <h4><b> Health Ministry’s Screening Committee (HMSC)</b></h4>
+                    <p>The Health Ministry’s Screening Committee (HMSC) operated by Department of Health Research/ICMR has been recently reconstituted by Ministry of Health & FW, GoI as per the directive of Cab Sec. HMSC is chaired by the Secretary, Department of Health Research (DHR), MOH&FW, GoI and Vice- Chairperson of the Committee is Secretary Department of Biotechnology(DBT). It has representatives from Department of Science and Technology; Ministry of Health & F.W.:, Directorate General of Health Services; Ministry of AYUSH; Ministry of Home Affairs; Ministry of External Affairs; Department of Economic Affairs, Ministry of Finance; Ministry of Defence; Central Drugs Standard Control Organization; Department of Agricultural Research and Education, Ministry of Agriculture; Ministry of Environment, Forest and Climate Change; Ministry of Fisheries, Animal Husbandry and Dairying; The Chair of the Review Committee for Genetic Manipulation; Directorate General of Foreign Trade and four independent subject experts as a standing expert group from governmental/non-governmental organizations/autonomous institutions representing different disciplines for expert opinion.</p>
+                <p>Department of Health Research (DHR/ICMR) is the Secretariat of HMSC and facilitates technical review of the international collaborative proposals for placement before this Committee as a mandatory requirement. The domain for HMSC is: <a href="https://hmsc.dhr.gov.in/">https://hmsc.dhr.gov.in/</a></p>
+            <p>As per the revised Terms of Reference (ToRs), the reconstituted HMSC will carry out the screening and clearance of proposals involving international collaboration/funding in health research including studies in humans, animals, plants and environment for entities pertaining to non Governmental Organizations. Committee will meet at least every two months to clear projects received for HMSC’s consideration. <a href="https://main.icmr.nic.in/sites/default/files/upload_documents/MoHFW_order.pdf">MoHFW order</a>
+
+</p>    
+<p>An integrated portal named Biological Research Regulatory Approval Portal (BioRRAP), coordinated by DBT,GoI, is to provide regulatory information to researchers and facilitate approvals. It is one-of-a-kind gateway intended to make science and scientific research more accessible as well as making it easier to create businesses. For any proposal to be submitted henceforth for HMSC consideration, it has been made mandatory by GoI to register through BioRRAP for a unique BioRRAP ID and then submit the proposal on the HMSC portal with a valid BioRRAP ID. Further details in this regard are available at <a href="https://biorrap.gov.in">https://biorrap.gov.in</a>
+
+</p>
+<p>Additionally, it is mandatory for the ICMR scientists to apply for HMSC clearance for the international research projects in the area of health research requiring foreign funding and/or collaboration (even ones under bilateral programmes of other Indian Funding Agencies). The proposals submitted by ICMR Institutes / Centers should submit the recommendations of the Scientific Advisory Committee (SAC) of their institute/centre.
+
+</p>
+<p>The research proposals submitted by Indian Principal Investigators through Call for Proposals mechanism under the bilateral MoUs signed by ICMR with international organizations/agencies (advertised by the concerned Technical Divisions of ICMR as and when decided by ICMR and the partner agency) will also be considered by the reconstituted HMSC.
+
+</p>
+<b>Some Important points for consideration by PIs:
+</b>
+
+    <ol>
+        <li>
+            Please ascertain from the foreign collaborator whether he/she would be willing to submit the proposal for obtaining any foreign grant.
+        </li>
+        <li>
+            If the foreign collaborator agrees to do so:
+            <ul>
+                <li>
+                    The Indian Principal Investigator (PI) may obtain the relevant form from the concerned funding agency’s website.
+                </li>
+                <li>
+                    The PI also has to fill in the HMSC summary sheet for international collaborative projects in the prescribed format. 
+                    (<a href="link_to_summary_sheet">Download Format for Summary Sheet</a>)
+                </li>
+            </ul>
+        </li>
+        <li>
+            The Indian and foreign Investigators should submit their proposals to DHR/ICMR and the respective foreign funding agency simultaneously for review to avoid undue delay.
+        </li>
+        <li>
+            The following general information is to be provided in the documents while submitting proposals for foreign collaboration/assistance by Indian investigators for HMSC consideration.
+        </li>
+         <ol type="I">
+        <li>
+            Role/Status/Expertise of the Indian Principal Investigator along with the CV and consent of all Co-investigators (if any).
+        </li>
+        <li>
+            Availability of infrastructure and manpower in the parent institution.
+        </li>
+        <li>
+            Justification for foreign collaboration/funding.
+        </li>
+        <li>
+            Relevance to India’s national health priorities.
+        </li>
+        <li>
+            Role, consent, and bio-data of foreign collaborator/co-investigator(s).
+        </li>
+        <li>
+            Budget with justification and year-wise break-up in single currency i.e. Indian currency, including training as well as foreign exchange visits component, if any.
+        </li>
+    </ol>
+    </ol>
+    <ol start="5" type="1">
+        <li>
+           Apart from the technical details such as rationale for the study objectives, review of literature, materials and methods, techniques to be used etc, the following additional information is required for a collaborative project:
+        </li>
+              <ol type="I">
+            <li>Nature of work to be done in Indian lab/institution and in foreign collaborator’s laboratory/institution.
+</li>
+<li>Number of ongoing international collaborative projects (duly approved by GoI) being undertaken by the Indian <b>PI</b> and the outcome of such approved projects (publications, patents, etc.). A max. of 5 ongoing international collaborative projects being undertaken by a <b>PI</b> is advisable.
+</li>
+<li>Whether there would be transfer of human biological material from India to the foreign lab, or vice-versa for QA/QC purpose and if so the requisite details for the same, such as nature, number and quantity (percentage wise) of material to be sent abroad; purpose/need of transfer; type of investigation(s) to be done utilizing the material; institution(s)/scientist(s) to whom material is to be sent along with their addresses; a duly signed Material Transfer Agreement (MTA). Download MTA It may be noted that transfer of all samples to the foreign lab is not permissible. If required, representative samples (about 10%) can be transferred to the foreign collaborators lab for QA/QC purposes.
+</li>
+<li>Whether there would be transfer of human biological material from India to the foreign lab, or vice-versa for QA/QC purpose and if so the requisite details for the same, such as nature, number and quantity (percentage wise) of material to be sent abroad; purpose/need of transfer; type of investigation(s) to be done utilizing the material; institution(s)/scientist(s) to whom material is to be sent along with their addresses; a duly signed Material Transfer Agreement (MTA). <a href="https://main.icmr.nic.in/sites/default/files/upload_documents/MATERIAL_TRANSEFR_Agreement.doc">Download MTA</a> It may be noted that transfer of all samples to the foreign lab is not permissible. If required, representative samples (about 10%) can be transferred to the foreign collaborators lab for QA/QC purposes.
+</li>
+        </ol>
+        </ol>
+  
+        <p><b>NOTE:</b> In case of transfer of human biological material under the collaborative proposals, guidelines issued by the Ministry of Health and Family Welfare, Govt. of India, New Delhi, vide O.M. No.L.19015/53/97-IH(Pt.) dated 19th Nov. 1997 are to be followed. Download Guidelines.
+</p>
+<ol start="6" type="1">
+    <li>With the progress in the area of cellular and molecular biology, the following points have become quite important for consideration by scientists during preparation of the proposals, as these may have a bearing on the approval process:
+</li>
+<ol type="I">
+    <li>Safety during transfer – risk of transportation of biological material. Adequate precautions need to be taken.
+</li>
+<li>National security – the research should not lead to development of biological weapons.<b>Reference</b> Guidelines on foreign engagement on Bio-safety/ Bio-security matters (dated December, 2015) prepared and issued by Division of Disarmament & International Security Affairs (D&ISA), MEA (duly approved by Cabinet Secretariat) for compliance in order to protect national security (reference Weapons of Mass Destruction Act, 2005 and overall framework of Biological and Toxin Weapons Convention (BTWC).
+
+</li>
+<li>Risk (relative) from the defence and internal security point of view of the country.
+</li>
+<li>Intellectual Property Rights issues, if any.
+</li>
+<li>Potential for commercial exploitation, such as by development of vaccines, diagnostics, therapeutics, drugs, etc.
+</li>
+</ol>
+</ol>
+
+<ol start="7" type="1">
+    <li>Institutional Ethics Committee (IEC) clearance to be submitted for each of the participating centers/sites at the time of submission of the proposal. The project is likely to be deferred by HMSC in the absence of IEC clearance certificate & <b>IRB/IEC should be registered with the National Ethics Committee Registry for Biomedical and Health Research in DHR/MoHFW.</b>.
+</li>
+<li>.For international collaborative studies involving multiple sites/centers in India, a single proposal may be submitted by one of the Indian Investigators (acting as a Coordinator). However, Institutional Ethics Committee clearances of all centers and their individual budgets/ roles in the study need to be submitted along with the common protocol.
+</li>
+<li>Appropriate clearances for research involving human subjects, animal experimentation /radio-tagged material (for clinical and/or experimental purposes), recombinant DNA/genetic engineering work are to be submitted.
+</li>
+<li>For research projects involving clinical drug trials, clearance from office of Drugs Controller General of India (DCGI) is to be submitted by Indian PI.
+</li>
+<p>The regulatory requirements of DCGI should be fulfilled and all necessary approvals as per the latest amendments by GoI of Jan/Feb 2013 in the Drugs and Cosmetics Rules 1945 should be followed /fulfilled by the Indian PIs. The decision of DCGI and Hon’ble Supreme Court of India on Clinical Trials of new drug entities would be applicable on such studies
+</p>
+<li>In case of clinical trial, the project also needs to be registered with the Clinical Trial Registry in ICMR (CTRI) before Initiation of this study (wherever applicable). For details visit Website: <a href="http://www.ctri.nic.in/">http://www.ctri.nic.in/</a>
+</li>
+<li>Institutes receiving foreign assistance should ensure to have the requisite Foreign Contribution (Regulation) Act (FCRA) clearance as per the requirement of DEA, Ministry of Finance, GOI. <a href="https://fcraonline.nic.in/home/PDF_Doc/doc00600120151214130739.pdf" style="word-wrap: break-word;">https://fcraonline.nic.in/home/PDF_Doc/doc00600120151214130739.pdf</a>
+</li>
+<li>Mutual agreement on IPR claims addressing the IPR issues is to be submitted, if applicable.
+</li>
+<li>Sharing of raw data by Indian PI with the foreign agency in any form is not permitted. Only de-identified/anonymized /analyzed data can be shared. An MoU on Data sharing/ Clinical Trial Agreement is to be submitted, wherever applicable.
+</li>
+<li>If the project involves field work/ utilization of State health facilities, then necessary approval of concerned State health authorities is to be provided.
+</li>
+<li>The Nagoya Protocol on Access and Benefit Sharing (ABS), (a new international treaty adopted under the auspices of the Convention on Biological Diversity (CBD) in Nagoya, Japan in 2010) which aims at fair and equitable sharing of benefits arising from the utilization of genetic resources is required to be followed.
+</li>
+<li>Any other regulatory requirement as considered necessary and relevant as per the study topic by other Ministries/ Departments will be notified subsequently, which are to be obtained and submitted by Indian PI.
+</li>
+<li>No modification/alteration in the format of HMSC Summary Sheet is allowed by Indian PI. The PI should strictly follow the format provided for consideration of HMSC.
+</li>
+<li>The PIs of approved projects are required to submit Annual and final progress report (in prescribed format) to the DHR/ICMR.
+</li>
+<li>The documents to be submitted by NGOs
+</li>
+<ol type="I">
+    <li>The annual reports, statement of accounts, achievements and their role in the project.
+</li>
+<li>Justification for the budget with exact amount to be used under different heads with full explanation.
+</li>
+<li>The composition of the Institutional Ethics Committee as per the ICMR ethics guidelines for biomedical research on human subjects.
+</li>
+<li>Registration/Unique ID No. assigned by NITI Aayog, GoI-NGO DARPAN Portal. <a href="https://ngodarpan.gov.in/">https://ngodarpan.gov.in/</a>
+</li>
+</ol>
+
+</ol>
+<p>Applications for International Collaborative Projects should be submitted online along with the listed documents for consideration of HMSC. : <a href="https://hmsc.dhr.gov.in">https://hmsc.dhr.gov.in</a></p>
+<p>Click here to Apply: <a href="https://biorrap.gov.in/">https://biorrap.gov.in/</a></p>
+<b>Note:</b>
+<ol type="1">
+    <li><b>Indian investigators are required to obtain HMSC clearance for international collaborative projects. DHR/ICMR receives applications from Indian PIs only.
+</b></li>
+<li> 
+<b>The requisite clearances /documents as required should be submitted by the PIs to avoid undue delay.</b>
+
+</li>
+<li>
+    <b>The proposals can be submitted throughout the year unless there is a prescribed deadline in a specific call for proposal under a bilateral programme.
+</b>
+</li>
+<li>
+    <b>Incomplete proposals will not be placed for consideration of Health Ministry’s Screening Committee (HMSC).
+</b>
+</li>
+</ol>
+                <h5>CONTACT PERSON(s)</h5>
+<b class="text-center">AT DHR:</b>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="card p-3" style="width: 350px;">
+        <div class="card-body">
+            <h5 class="card-title text-center"><b>Smt. Anu Nagar</b></h5>
+            <p class="card-text text-center mb-1"><b>Joint Secretary</b></p>
+            <p class="card-text text-center"><b>Department of Health Research, MoHFW, GoI</b></p>
+            <p class="text-center">
+                <a href="mailto:anu.nagar1@gov.in" class="card-link">anu.nagar1@gov.in</a>
+            </p>
+            <p class="card-text text-center"><b>Tel: 011-23736222, 011-23736219</b></p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-4">
+    <b>AT ICMR:</b>
+        <div class="row g-4">
+            <!-- Dr. Mukesh Kumar -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Mukesh Kumar</h5>
+                        <p class="card-text"><strong>Position:</strong> Scientist G & Head</p>
+                        <p class="card-text"><strong>Division:</strong> International Health Division</p>
+                        <p class="card-text"><strong>Email:</strong> <a href="mailto:mukeshk.hq@icmr.gov.in">mukeshk.hq@icmr.gov.in</a></p>
+                        <p class="card-text"><strong>Tel:</strong> 91-11-26588755</p>
+                        <p class="card-text"><strong>Tele:</strong> 26589794, 26588980</p>
+                        <p class="card-text"><strong>Extn:</strong> 242</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr. Harpreet Sandhu -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Harpreet Sandhu</h5>
+                        <p class="card-text"><strong>Position:</strong> Scientist G</p>
+                        <p class="card-text"><strong>Division:</strong> International Health Division</p>
+                        <p class="card-text"><strong>Email:</strong> <a href="mailto:sandhuh.hq@icmr.gov.in">sandhuh.hq@icmr.gov.in</a></p>
+                        <p class="card-text"><strong>Tele Fax:</strong> 91-11-26589492</p>
+                        <p class="card-text"><strong>Tele:</strong> 26589794, 26588980</p>
+                        <p class="card-text"><strong>Extn:</strong> 237</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr. Padma Singh -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Padma Singh</h5>
+                        <p class="card-text"><strong>Position:</strong> Scientist E</p>
+                        <p class="card-text"><strong>Email:</strong> <a href="mailto:padma.singh@nic.in">padma.singh@nic.in</a></p>
+                        <p class="card-text"><strong>Tel:</strong> 011-23736216</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr. Reema Roshan -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Reema Roshan</h5>
+                        <p class="card-text"><strong>Position:</strong> Scientist C</p>
+                        <p class="card-text"><strong>Division:</strong> International Health Division</p>
+                        <p class="card-text"><strong>Email:</strong> <a href="mailto:reemaroshan.hq@icmr.gov.in">reemaroshan.hq@icmr.gov.in</a></p>
+                        <p class="card-text"><strong>Tele Fax:</strong> 91-11-26589492</p>
+                        <p class="card-text"><strong>Tele:</strong> 26589794, 26588980</p>
+                        <p class="card-text"><strong>Extn:</strong> 361</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="guidance">
+    <h2>◆ <b>Regulatory approvals required for import/export/transfer/receive of Biological Material</b></h2>
+    <div class="container my-4">
+        <!-- Horizontal Tabs -->
+      <ul class="nav-tabs" id="horizontal-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="ibsc-tab" data-bs-toggle="tab" data-bs-target="#ibsc" type="button" role="tab" aria-controls="ibsc" aria-selected="true">IBSC</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rcgm-tab" data-bs-toggle="tab" data-bs-target="#rcgm" type="button" role="tab" aria-controls="rcgm" aria-selected="false">RCGM</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="nbpgr-tab" data-bs-toggle="tab" data-bs-target="#nbpgr" type="button" role="tab" aria-controls="nbpgr" aria-selected="false">NBPGR</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="nba-tab" data-bs-toggle="tab" data-bs-target="#nba" type="button" role="tab" aria-controls="nba" aria-selected="false">NBA</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="dppqs-tab" data-bs-toggle="tab" data-bs-target="#dppqs" type="button" role="tab" aria-controls="dppqs" aria-selected="false">DPPQS</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="dgft-tab" data-bs-toggle="tab" data-bs-target="#dgft" type="button" role="tab" aria-controls="dgft" aria-selected="false">DGFT</button>
+    </li>
+</ul>
+<!-- Tab Content -->
+<div class="tab-content mt-3" id="horizontal-tabs-content">
+    <div class="tab-pane fade show active" id="ibsc" role="tabpanel" aria-labelledby="ibsc-tab">
+        <h4><b>Institutional Biosafety Committee (IBSC) of the organization</b></h4>
+        <ul>
+            <li>IBSCs are authorized to consider and approve the applications for exchange, import or export of the regulated biological materials up to prescribed quantities and risk groups as specified in Table A of “Revised Simplified Procedure/Guidelines on Import, Export and Exchange of GE organisms and products therpeof for R&D purpose, 2020” (<a href="https://ibkp.dbtindia.gov.in/Content/Rules">https://ibkp.dbtindia.gov.in/Content/Rules</a>) for Biopharma Drug Development R&D as well as for R&D other than Biopharma Drug Development
+</li>
+            <li>IBSC reviews and recommends to RCGM the applications for Import, export, and exchange of Regulated items more than the specified quantity, all materials belonging to RG3 and RG4 or the items not covered in the Annexure 1 of “Revised Simplified Procedure/Guidelines on Import, Export and Exchange of GE organisms and products thereof for R&D purpose, 2020”
+</li>
+        </ul>
+        
+    </div>
+    <div class="tab-pane fade" id="rcgm" role="tabpanel" aria-labelledby="rcgm-tab">
+        <h4><b>Review Committee on Genetic Manipulation (RCGM)</b></h4>
+        <ul>
+            <li>Import, export, and exchange of Regulated items more than the specified quantity, all materials belonging to RG3 and RG4 or not covered in the Annexure 1 of “Revised Simplified Procedure/Guidelines on Import, Export and Exchange of GE organisms and products thereof for R&D purpose, 2020” shall require prior approval of IBSC followed by RCGM.
+</li>
+            <li>On request submitted on IBKP portal, RCGM Secretariat may issue NOC/ permit based on IBSC approval.
+</li>
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="nbpgr" role="tabpanel" aria-labelledby="nbpgr-tab">
+        <h4><b> National Bureau of Plant Genetic Resources</b></h4>
+        <ul>
+            <li>In case of import of genetically engineered plants and planting materials for research/experimental purpose, the import recommended by RCGM is routed through the Director, National Bureau of Plant Genetic Resources (NBPGR), New Delhi of the Indian Council of Agricultural Research, on the basis of the authorization letter issued by the RCGM Secretariat.
+</li>
+            <li>It plays a key role in importing and exporting plant material for research and agricultural purposes.Import application of plant germplasm for research/experimental purpose will be made to the Director, National Bureau of Plant Genetic Resources, New Delhi.
+</li>
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="nba" role="tabpanel" aria-labelledby="nba-tab">
+        <h4><b> National Biodiversity Authority of India</b></h4>
+        <ul>
+            <li>For export of biological material of Indian origin, permit of National Biodiversity Authority of India is also required in addition to IBSC/RCGM approval mentioned at para 1 and 2 above.</li>
+            <li>Any person or institution who wants to transfer microorganisms obtained from India to a foreign country for non-commercial research purpose, has to obtain the approval from NBA by applying in Form B before sending microorganisms outside India.
+</li>
+<li>Indian researchers neither require prior approval nor need to give prior intimation to State Biodiversity Board for obtaining biological resource for conducting research in India. In case the results are used for commercial purposes, prior intimation to the State Biodiversity Board is required under Section 7 of the Biological Diversity Act 2002.
+</li>
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="dppqs" role="tabpanel" aria-labelledby="dppqs-tab">
+        <h4> <b>Directorate of Plant Protection Quarantine & Storage</b></h4>
+        <ul>
+            <li>Import of live insects, microbial cultures or bio-control agents, plant germplasm, plant and plant products and soil are subjected to Plant Quarantine, as per Plant Quarantine (Regulation of Import into India) Order, 2003, dealt in Ministry of Agriculture Cooperation and Farmers Welfare.
+</li>
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="dgft" role="tabpanel" aria-labelledby="dgft-tab">
+        <h4><b> Directorate General of Foreign Trade (DGFT) for SCOMET items</b></h4>
+        <ul>
+            <li>For items considered dual-use, export is prohibited or restricted and require a license to export from India. These items belonging to Special Chemicals, Organism, Materials, Equipment & Technologies (SCOMET) category and the applicant needs to apply to DGFT, Ministry of Commerce through online secure portal in Prescribed Form - ANF 2E and ANF1 (www.dgft.gov.in).
+</li>
+            <li>For import of restricted items e.g., Rhagoletis Pomonella Pupae, other insects and all live animals except Fish and crustaceans, molluscs and other aquatic invertebrates etc., license/ authorisation will have to be obtained from DGFT.
+</li>
+<li>Import of Drosophila melanogaster is ‘Free’, subject to IBSC approval, as per the provisions of the Revised Simplified Procedures/ Guidelines on Import, Export and Exchange of GE organisms and products thereof for R&D purpose notified by the Department of Biotechnology vide OM No. BT/BS/17/635/2015-PID dated 17.01.2020.
+</li>
+        </ul>
+    </div>
+</div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+    <footer class="text-light py-4">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- BIORRAP Section -->
+          <div class="col-md-6">
+            <h5 class="text-uppercase">BIORRAP</h5>
+            <p class="footerp">
+              Biological Research activities involve handling and exchange of
+              materials that include micro-organisms, plants, small and large
+              animals, human samples as well as biodiversity resources of the
+              country. The Government of India supports biological research
+              through its Ministries/Departments providing statutory and
+              administrative approvals through their regulatory
+              agencies/committees. Health Ministry’s Screening Committee (HMSC),
+              Review Committee on Genetic Manipulation (RCGM), Committee for the
+              Purpose of Control and Supervision of Experiments on Animals
+              (CPCSEA), National Biodiversity Authority (NBA), Directorate Of
+              Plant Protection, Quarantine & Storage (DPPQ) and Directorate
+              General of Foreign Trade (DGFT) are amongst the regulatory
+              agencies/committees facilitating biological research in India by
+              providing requisite approvals.
+            </p>
+          </div>
+
+          <!-- Useful Links Section -->
+          <div class="col-md-2">
+            <h5 class="text-uppercase">Useful Links</h5>
+            <ul class="list-unstyled icon-custmef">
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./AboutUs.html"
+                  class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./Guidance.html"
+                  class="text-light text-decoration-none"
+                  >Guidelines</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./OrganizationRegistration.html"
+                  class="text-light text-decoration-none"
+                  >Search Applicant Agency</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ApplicationSubmission.html"
+                  class="text-light text-decoration-none"
+                  >Application Submission</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./RegulatoryDocuments.html"
+                  class="text-light text-decoration-none"
+                  >Regulatory Documents</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ContactUs.html"
+                  class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a href="./Faqs.html" class="text-light text-decoration-none"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Us Section -->
+          <div class="col-md-3">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p class="small">
+              <i class="bi bi-geo-alt-fill icon-custme"></i> Department of
+              Biotechnology Ministry of Science & Technology Block 2, 6th-8th
+              Floor, Block 3, 5th Floor CGO Complex, Lodhi Road, New Delhi - 110
+              003.
+            </p>
+        
+            <p class="small">
+              <strong>For Any Query:</strong><br />
+
+              <i class="bi bi-envelope-check icon-custme"></i> Email:
+               biorrap-hyphen-team@dbt.nic.in<br />
+              <i class="bi bi-telephone icon-custme"></i> Phone: 011-24365136
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4 border-top pt-3">
+          <p class="small mb-0">
+            Website is Designed and Developed by Department of Biotechnology,
+            Ministry of Science & Technology, Govt. of India.
+          </p>
+          <img
+            src="https://biorrap.gov.in/Default/img/NIC_Logo.png"
+            alt="logo"
+            width="100"
+          />
+        </div>
+      </div>
+    </footer><!-- left side links -->
+        <div class="sidebar">
+          <a href="./Faqs.html">
+            <div class="icon-item">
+              <i class="bi bi-question-lg"></i></div
+          ></a>
+          <a href="./ContactUs.html">
+            <div class="icon-item">
+              <i class="bi bi-person-lines-fill"></i></div
+          ></a>
+        </div><i class="bi bi-arrow-up-square-fill" id="scrollToTop"></i>
+               <button class="chatbot-toggler">
+             <span class="bi bi-chat-left-text-fill fs-4"></span>
+             <span class="bi bi-x-lg"></span>
+           </button>
+           <div class="chatbot">
+             <div class="chat-header">
+               <img src="./img/logo.jpg" alt="Support DP" />
+               <span>BioRRAP TEAM</span>
+               <span class="close-btn bi bi-x-lg"></span>
+             </div>
+        
+             <ul class="chatbox">
+               <li class="chat incoming">
+                 <p>Hi there! How can I help you today?</p>
+               </li>
+             </ul>
+             <div class="chat-input">
+               <textarea
+                 placeholder="Enter a message..."
+                 spellcheck="false"
+                 required
+               ></textarea>
+               <span id="send-btn" class="bi bi-send-fill"></span>
+             </div>
+           </div>
+    <!-- chat js -->
+     <script src="./js/chat.js"></script>
+<!-- scroll to top js -->
+ <script src="./js/scrolltop.js"></script>
+<!-- pre header controller button js -->
+ <script src="./js/preheader.js"></script>
+    <!-- search modal js -->
+     <script src="./js/SearchModal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

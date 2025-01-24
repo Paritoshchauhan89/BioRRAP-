@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regulatory Documents</title>
+     <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+
+  </head>
+  <body>
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search..."
+            />
+            <ul id="searchResults" class="list-unstyled mt-3"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="header container-fluid d-flex align-items-center justify-content-between"
+    >
+      <div class="flex-grow-1 d-none d-md-block"><b class="text-light fs-4">Biological Research Regulatory Approval Portal (BioRRAP)
+</b></div>
+
+      <a class="link text-decoration-none text-dark" href="#navbar">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-arrow-return-right"></i>
+          <span class="fw-medium d-none d-sm-inline pre-header-text"
+            >Skip to Main Content</span
+          >
+        </div>
+      </a>
+
+      <div class="divider d-none d-sm-block"></div>
+
+      <a class="link text-decoration-none text-dark" href="/sitemap">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-diagram-2"></i>
+          <span class="fw-medium d-none d-sm-inline pre-header-text"
+            >Sitemap</span
+          >
+        </div>
+      </a>
+
+      <div class="wide-divider d-none d-sm-block"></div>
+
+      <div class="controls d-flex align-items-center gap-2">
+        <button class="btn btn-dark control-btn minus" onclick="zoomOut()">
+          <i class="bi bi-dash-lg"></i>
+        </button>
+        <div class="percentage pre-header-text">100%</div>
+        <button class="btn btn-dark control-btn plus" onclick="zoomIn()">
+          <i class="bi bi-plus-lg"></i>
+        </button>
+        <button class="btn btn-dark control-btn" onclick="toggleFullscreen()">
+          <i class="bi bi-arrows-fullscreen" id="fullscreen-icon"></i>
+        </button>
+        <button class="btn btn-dark control-btn" id="themeToggle">
+          <i class="bi bi-sun" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+           <img
+            src="./img/logo.jpg"
+            alt="BioRRAP"
+          />
+          <span
+            >Department of Biotechnology<br />Ministry of Science and
+            Technology</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="./AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./OrganizationRegistration.html"
+                >Organization Registration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ApplicationSubmission.html"
+                >Application Submission</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Regulatory Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Faqs.html">FAQ</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="./login.html"><button class="btn btn-custom">Login</button></a>
+            <a href="./OrganizationRegistration.html"><button class="btn btn-custom">Register</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid mt-2 mb-2">
+      <div class="marquee-container">
+        <div class="marquee">
+          BioRRAP is Notified: Organizations can now register on BioRRAP.
+          <a
+            href="https://biorrap.gov.in/upload/OMNotificationBioRRAP.pdf"
+            style="color: #e99c03e0"
+          >
+            to view notification</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="parallax" id="parallax-Regulatory-Documents">
+      <h2>Application Submission</h2>
+    </section>
+
+  <div class="container-fluid mt-2">
+    <div class="row">
+      <div class="col-md-3">
+<div class="card shadow rounded position-sticky">
+            <div
+              class="card-header text-white border-warning position-relative"
+            >
+              <div class="d-flex align-items-center">
+                <h5 class="mb-0">Important links</h5>
+                  &nbsp;<i class="bi bi-link fs-4"></i>
+              </div>
+            </div>
+            <div
+              class="card-body p-0"
+            >
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./Guidance.html">Guidance</a>
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./AdministrativeAuthorityList.html"
+                      >Administrative Authorities for International Research</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryAuthorityList.html"
+                      >Regulatory Authorities</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <span class="d-flex align-items-center">
+                    <i
+                      class="bi bi-info-square-fill me-2"
+                      style="font-size: 1.5rem; color: #a0a6ac"
+                    ></i>
+                    <a href="./RegulatoryDocuments.html"
+                      >Regulatory Documents</a
+                    >
+                  </span>
+                  <span class="badge bg-info text-white">Info</span>
+                </li>
+                <div class="contactdetails p-2">
+                  <h6><b>For Any Query:</b></h6>
+                  <p>
+                    <i class="bi bi-envelope-check icon-custme"></i>
+                    biorrap[dot]in[at]dbt[dot]nic[dot]in<br />
+                    <i class="bi bi-telephone icon-custme"></i> Contact At:
+                    011-24365136
+                  </p>
+                
+                </div>
+               
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-8">
+           <div class="row p-2">
+        <h3>
+          <b style="border-bottom: 2px solid greenyellow"
+            >Biosafety & Biosecurity</b
+          >
+          Related
+        </h3>
+
+        <div class="col-md-12">
+          <h3 style="color: red; text-align: right">
+            Acts, Rules, Regulations
+          </h3>
+          <h4></h4>
+          <div class="row m-auto p-2">
+            <div class="col-md-4">
+              <ul class="ul-circles ul-circles-vertical">
+                <li class="national"></li>
+              </ul>
+            </div>
+            <div class="col-md-8 m-auto">
+              <h4>NATIONAL</h4>
+              <ul class="text-justify">
+                <li>The Environment (Protection) Act, 1986 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121450052_The-Environment-Protection-Act-1986.pdf">Download here</a></li>
+                <li>
+                  Rules for the manufacture, use, import, export & storage of
+                  hazardous microorganisms, GE organisms or cells,1989 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121526033_Rules-for-the-manufacture-use-import-export-and-storage-1989.pdf">Download
+                  here</a>
+                </li>
+                <li>
+                  Drugs and Cosmetics Rules - 1988 (eight amendment) <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121725374_drug%20and%20Cosmetics%20Rules.pdf">Download
+                  here</a>
+                </li>
+                <li>Schedule–Y of Drugs and Cosmetics Act <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121749531_Schedule_Y.pdf">Download here</a></li>
+                <li>
+                  Protection of Plant Varieties and Farmers’ Rights Act, 2001
+                  <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121824577_The%20Protection%20of%20Plant%20Varieties%20and%20Farmers%E2%80%99%20Rights%20Act,%202001.pdf">Download here</a>
+                </li>
+                <li>Biological Diversity Act, 2002 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121848622_biological%20diversity%20act%202002.pdf">Download here</a></li>
+                <li>Food Safety and Standards Act 2006 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121904566_Food-Safety-and-Standards-Act-2006.pdf">Download here</a></li>
+                <li>Plant Quarantine Order, 2003 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121925276_PlantQuarantine_order_2003.pdf">Download here</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row m-auto p-2">
+            <div class="col-md-4">
+              <ul class="ul-circles ul-circles-vertical">
+                <li class="international"></li>
+              </ul>
+            </div>
+            <div class="col-md-8 m-auto">
+              <h4>INTERNATIONAL</h4>
+              <ul class="text-justify">
+                <li>Convention on Biological Diversity (1992) <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115122523619_cbd-en.pdf">Download here</a></li>
+                <li>
+                  Cartagena Protocol on Biosafety to the Convention on
+                  Biological Diversity (2000) <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115122551014_cartagena-protocol.pdf">Download here</a>
+                </li>
+                <li>
+                  Nagoya Kuala Lumpur Supplementary Protocol on Liability and
+                  Redress to the Cartagena Protocol on Biosafety (CPB) <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115122612909_supplementary%20protocol.pdf">Download
+                  here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid row" style="padding: 20px">
+      <div class="col-md-4 policies-left">
+        <h4><b>Policies</b></h4>
+        <ul>
+          <li>
+            Doubling Farmers’ Income: Rationale, Strategy, Prospects and Action
+            plan, NITI Policy Paper No. 1/2017 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125438058_DOUBLING%20FARMERS%20INCOME.pdf">Download here</a>
+          </li>
+          <li>
+            Twelfth Five Year Plan (2012–2017): Economic Sectors, 2013 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125038389_12fyp_vol2.pdf">Download
+            here</a>
+          </li>
+          <li>
+            National Biotechnology Development Strategy 2015-2020 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125124094_national%20biotechnology%20development%20strategy.pdf">Download here</a>
+          </li>
+          <li>National Policy for Farmers, 2007 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125145657_National-Policy-for-Farmers_2007.pdf">Download here</a></li>
+          <li>National Environment Policy, 2006 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20190411103521431_National%20Environment%20Policy,%202006.pdf">Download here</a></li>
+          <li>Drug Policy, 2002 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125209427_drug%20policy%202002.pdf">Download here</a></li>
+          <li>National Seeds Policy, 2002 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115125229883_National-Seed-Policy_2002.pdf">Download here</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8 notifications-right">
+        <h4><b>Notifications</b></h4>
+        <ul>
+          <li>
+            Foreign Trade Policy for import of GM Products, 2006 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133217157_FTP%20of%20GM%20import.pdf" target="_blank">Download here</a>
+          </li>
+          <li>
+            Exemption of recombinant pharmaceutical falling in specific category
+            for Rules 7 to 10 of Rules 1989 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133234109_Exemption.pdf" target="_blank">Download here</a>
+          </li>
+          <li>
+            Exemption of processed food derived from living modified organism
+            <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133419103_exemption%20of%20processed%20food.pdf" target="_blank">Download here</a>
+          </li>
+          <li>
+            Notifications empowering Seed inspectors, Seed Analyst and
+            Laboratories notified under seed Act, 1966 and Seed Control Order,
+            1983 under Environment (Protection) Act, 1986 <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133447085_seed%20inspectors.pdf" target="_blank">Download here</a>
+
+          </li>
+          <li>Authorizing ICAR for approval of Bt cotton <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133508271_Authorization%20ICAR.pdf" target="_blank">Download here</a></li>
+          <li>
+            Notification for LMO/GMO detection National Referral Laboratories
+                        <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133540082_national%20referral%20laboratories.pdf" target="_blank">Download here</a>
+
+          </li>
+          <li>
+            Notification empowering CICR to detect presence Cry1AC gene in
+            Cotton seeds             <a href="https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115133730763_CICR%20nagpur.pdf" target="_blank">Download here</a>
+
+          </li>
+          <li>
+            Notification of Rules, 1989 - September 13, 1993 Notification of
+            Rules, 1989 - September 13, 1993
+          </li>
+          <li>
+            Genetic Engineering Approval Committee renamed as Genetic
+            Engineering Appraisal Committee - July 16, 2010 GE Approval
+            Committee renamed as GE Appraisal Committee, July, 2010
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid guidelinesandprotocols">
+      <h4 class="text-center">
+        <b style="border-bottom: 2px solid yellowgreen"
+          >Guidelines and Protocols</b
+        >
+      </h4>
+      <h5>NATIONAL</h5>
+      <div class="d-flex">
+        <div class="nationalguidelinesborder"></div>
+        <ul>
+          <li>
+            List of infective Microorganisms corresponding to different Risk
+            Groups, 2021" vide DBT OM dated 09.12.2021 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Minimum qualification of Biosafety Officer, vide DBT OM dated
+            12.08.2021 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Submission of Documents for Compliance on IBKP vide DBT OM dated
+            11.08.2021, <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            SOPs for exchange of infectious biosamples/biospecimen from
+            Biorepsitory, 2021 vide DBT OM dated 07.06.2021 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Generic PCT protocol for assessing toxicity of recombinant DNA
+            derived products in animal models. <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Guidelines for the Establishment of Containment Facilities: BSL2 and
+            BSL3 and Certification of BSL3 facility 2020,vide DBT order dated
+            18.12.2020 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Online IBSC meetings conditions, vide DBT OM dated 22.12.2020
+            <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Handbook for Institutional Biosafety Committees (IBSCs), Third
+            Revised Edition, September 2020 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Streamlining of the Regulation Procedure of Biopharma Drug
+            Development, vide DBT OM dated 06.08.2020 Download here<a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Rapid Response Regulatory Framework for COVID-19 Vaccine Development
+            vide DBT OM dated 26.05.2020- Checklist recombinant vaccine Covid 19
+          </li>
+          <li>
+            OM for Rapid Response Regulatory Framework for COVID-19 vide DBT OM
+            dated 20.03.2020 Rapid Response Regulatory Framework for COVID-19
+          </li>
+          <li>
+            Checklist for information requirements in the Applications and
+            Reports on Preclinical toxicity study of similar Biologics, <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Revised Simplified Procedures/ Guidelines on Import, Export and
+            Exchange of GE organisms and products thereof for R&D purpose, 2020
+            vide DBT OM dated 17.01.2020 Revised Simplified
+            Procedures/Guidelines on Import, Export and Exchange
+          </li>
+          <li>
+            Regulations & Guidelines for Recombinant DNA Research and
+            Biocontainment, 2017 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Environmental Risk Assessment of Genetically Engineered Plants: A
+            Guide for Stakeholders, 2016 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Guidelines for the Environmental Risk Assessment of Genetically
+            Engineered Plants, 2016 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>Risk Analysis Framework, 2016 <a href="" style="color:var(--secondary);">Download here</a></li>
+          <li>Guidelines on Similar Biologics, 2016 <a href="" style="color:var(--secondary);">Download here</a></li>
+          <li>
+            Simplified Procedures/ Guidelines on Exchange, Import & Export of GE
+            organisms & Products thereof for R&D purpose, 2015 <a href="" style="color:var(--secondary);">Download here</a>
+          </li>
+          <li>
+            Guidelines and Handbook for Institutional Biosafety Committees
+            (IBSCs), 2011 Download here
+          </li>
+          <li>
+            Guidelines for the Safety Assessment of Foods Derived from
+            Genetically Engineered Plants, 2008 Download here
+          </li>
+          <li>
+            Guidelines for the monitoring of Confined Field Trials of Regulated,
+            Genetically Engineered (GE) Plants, 2008 Download here
+          </li>
+          <li>
+            Guidelines for the conduct of Confined Field Trials of Regulated,
+            Genetically Engineered (GE) Plants, 2008 Download here
+          </li>
+          <li>
+            Standard Operating Procedures (SOPs) for Confined Field Trials of
+            Regulated, Genetically Engineered (GE) Plants, 2008 Download here
+          </li>
+          <li>
+            Protocol for Food and Feed Safety Assessment of GE crops, 2008
+            Download here
+          </li>
+          <li>Export control system of SCOMET items, 2018 Download here</li>
+          <li>
+            Monitoring Confined Field Trials of Genetically Engineered Plants- A
+            Monitoring Manual; Monitoring Confined Field Trials of GE Plants- A
+            monitoring Manual
+          </li>
+          <li>
+            Monitoring Confined Field Trials of Genetically Engineered Plants- A
+            Tool for trainers; Monitoring Confined Field Trial of GE Plants
+            -Tools for Trainers
+          </li>
+          <li>
+            Confined Field Trials of GE Plants, 2015; Confined Field Trials of
+            GE Plants, 2015
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="text-light py-4">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- BIORRAP Section -->
+          <div class="col-md-6">
+            <h5 class="text-uppercase">BIORRAP</h5>
+            <p class="footerp">
+              Biological Research activities involve handling and exchange of
+              materials that include micro-organisms, plants, small and large
+              animals, human samples as well as biodiversity resources of the
+              country. The Government of India supports biological research
+              through its Ministries/Departments providing statutory and
+              administrative approvals through their regulatory
+              agencies/committees. Health Ministry’s Screening Committee (HMSC),
+              Review Committee on Genetic Manipulation (RCGM), Committee for the
+              Purpose of Control and Supervision of Experiments on Animals
+              (CPCSEA), National Biodiversity Authority (NBA), Directorate Of
+              Plant Protection, Quarantine & Storage (DPPQ) and Directorate
+              General of Foreign Trade (DGFT) are amongst the regulatory
+              agencies/committees facilitating biological research in India by
+              providing requisite approvals.
+            </p>
+          </div>
+
+          <!-- Useful Links Section -->
+          <div class="col-md-2">
+            <h5 class="text-uppercase">Useful Links</h5>
+            <ul class="list-unstyled icon-custmef">
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./AboutUs.html"
+                  class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./Guidance.html"
+                  class="text-light text-decoration-none"
+                  >Guidelines</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./OrganizationRegistration.html"
+                  class="text-light text-decoration-none"
+                  >Search Applicant Agency</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ApplicationSubmission.html"
+                  class="text-light text-decoration-none"
+                  >Application Submission</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./RegulatoryDocuments.html"
+                  class="text-light text-decoration-none"
+                  >Regulatory Documents</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a
+                  href="./ContactUs.html"
+                  class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-link-45deg"></i
+                ><a href="./Faqs.html" class="text-light text-decoration-none"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Us Section -->
+          <div class="col-md-3">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p class="small">
+              <i class="bi bi-geo-alt-fill icon-custme"></i> Department of
+              Biotechnology Ministry of Science & Technology Block 2, 6th-8th
+              Floor, Block 3, 5th Floor CGO Complex, Lodhi Road, New Delhi - 110
+              003.
+            </p>
+        
+            <p class="small">
+              <strong>For Any Query:</strong><br />
+
+              <i class="bi bi-envelope-check icon-custme"></i> Email:
+               biorrap-hyphen-team@dbt.nic.in<br />
+              <i class="bi bi-telephone icon-custme"></i> Phone: 011-24365136
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4 border-top pt-3">
+          <p class="small mb-0">
+            Website is Designed and Developed by Department of Biotechnology,
+            Ministry of Science & Technology, Govt. of India.
+          </p>
+          <img
+            src="https://biorrap.gov.in/Default/img/NIC_Logo.png"
+            alt="logo"
+            width="100"
+          />
+        </div>
+      </div>
+    </footer> <!-- left side links -->
+        <div class="sidebar">
+          <a href="./Faqs.html">
+            <div class="icon-item">
+              <i class="bi bi-question-lg"></i></div
+          ></a>
+          <a href="./ContactUs.html">
+            <div class="icon-item">
+              <i class="bi bi-person-lines-fill"></i></div
+          ></a>
+        </div><i class="bi bi-arrow-up-square-fill" id="scrollToTop"></i>
+               <button class="chatbot-toggler">
+             <span class="bi bi-chat-left-text-fill fs-4"></span>
+             <span class="bi bi-x-lg"></span>
+           </button>
+           <div class="chatbot">
+             <div class="chat-header">
+               <img src="./img/logo.jpg" alt="Support DP" />
+               <span>BioRRAP TEAM</span>
+               <span class="close-btn bi bi-x-lg"></span>
+             </div>
+        
+             <ul class="chatbox">
+               <li class="chat incoming">
+                 <p>Hi there! How can I help you today?</p>
+               </li>
+             </ul>
+             <div class="chat-input">
+               <textarea
+                 placeholder="Enter a message..."
+                 spellcheck="false"
+                 required
+               ></textarea>
+               <span id="send-btn" class="bi bi-send-fill"></span>
+             </div>
+           </div>
+    <!-- chat js -->
+     <script src="./js/chat.js"></script>
+<!-- scroll to top js -->
+ <script src="./js/scrolltop.js"></script>
+    <!-- pre header controller button js -->
+ <script src="./js/preheader.js"></script>
+    <!-- search modal js -->
+    <script src="./js/SearchModal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
